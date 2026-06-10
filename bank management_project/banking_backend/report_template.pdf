@@ -1,0 +1,99 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 3670 >>
+stream
+BT
+BT /F1 18 Tf 50 760 Td (PROJECT REPORT TEMPLATE) Tj
+T*
+(Banking Backend - Spring Boot REST API) Tj T*
+(Generated from current backend implementation) Tj T*
+(Date: 2026-06-08) Tj T*
+T*
+(1. Project Summary) Tj T*
+(- Backend implements admin and user banking operations using Spring Boot.) Tj T*
+(- Layered design with REST controllers, service logic, JDBC DAOs, and domain models.) Tj T*
+(- MySQL-ready architecture with transaction logging and validation.) Tj T*
+T*
+(2. Architecture Overview) Tj T*
+(- Controller Layer: AuthController, AdminController, UserController.) Tj T*
+(- Service Layer: TransactionService, UserService, CreditRequestService, AuthenticationService.) Tj T*
+(- DAO Layer: AccountDao, UserDao, TransactionDao, CreditRequestDao.) Tj T*
+(- Model Layer: User, Account, Transaction, CreditRequest, Role, TransactionType.) Tj T*
+(- Validation Layer: TransactionValidationChain and validator implementations.) Tj T*
+T*
+(3. Core Features Implemented) Tj T*
+(- Admin login and user login.) Tj T*
+(- User balance inquiry, transfer, transaction history, and credit request.) Tj T*
+(- Admin user management, block/unblock, credit account, and audit transaction listing.) Tj T*
+(- Transaction persistence and business validation before execution.) Tj T*
+T*
+(4. Design Patterns Implemented) Tj T*
+(- Singleton: DatabaseConnectionManager) Tj T*
+(- Factory: UserFactory) Tj T*
+(- Builder: TransactionBuilder) Tj T*
+(- Command: Command interface, TransferCommand, CreditAccountCommand) Tj T*
+(- DAO: AccountDao, UserDao, TransactionDao, CreditRequestDao) Tj T*
+(- Chain of Responsibility: TransactionValidationChain plus validators) Tj T*
+T*
+(5. Pattern File Mapping) Tj T*
+(- Singleton: src/main/java/com/banking/database/DatabaseConnectionManager.java) Tj T*
+(- Factory: src/main/java/com/banking/factory/UserFactory.java) Tj T*
+(- Builder: src/main/java/com/banking/builder/TransactionBuilder.java) Tj T*
+(- Command: src/main/java/com/banking/command/Command.java) Tj T*
+(  src/main/java/com/banking/command/TransferCommand.java) Tj T*
+(  src/main/java/com/banking/command/CreditAccountCommand.java) Tj T*
+(- DAO: src/main/java/com/banking/dao/AccountDao.java) Tj T*
+(  src/main/java/com/banking/dao/UserDao.java) Tj T*
+(  src/main/java/com/banking/dao/TransactionDao.java) Tj T*
+(  src/main/java/com/banking/dao/CreditRequestDao.java) Tj T*
+(- Chain of Responsibility: src/main/java/com/banking/validation/TransactionValidationChain.java) Tj T*
+(  src/main/java/com/banking/validation/TransactionValidator.java) Tj T*
+(  src/main/java/com/banking/validation/AmountValidator.java) Tj T*
+(  src/main/java/com/banking/validation/AccountExistsValidator.java) Tj T*
+(  src/main/java/com/banking/validation/BlockedValidator.java) Tj T*
+(  src/main/java/com/banking/validation/BalanceValidator.java) Tj T*
+T*
+(6. Architecture Diagrams) Tj T*
+(Layer Diagram:) Tj T*
+([User/Admin Requests] -> [Controllers] -> [Services] -> [DAOs] -> [Database]) Tj T*
+T*
+(Transaction Validation Chain:) Tj T*
+([AmountValidator] -> [AccountExistsValidator] -> [BlockedValidator] -> [BalanceValidator]) Tj T*
+T*
+(Command Flow:) Tj T*
+([Controller] -> [TransferCommand/CreditAccountCommand] -> [TransactionService] -> [DAO] -> [Database]) Tj T*
+T*
+(7. Notes and Recommendations) Tj T*
+(- Adapter pattern is not yet implemented; plan it for external notification or payment gateway integration.) Tj T*
+(- Passwords are currently stored in plain text; encrypt passwords before production use.) Tj T*
+(- Hardcoded admin fallback exists; ensure secure admin credential handling later.) Tj T*
+(- This report is generated from current backend implementation and design documentation.) Tj T*
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000000 00000 n 
+0000000049 00000 n 
+0000000106 00000 n 
+0000000232 00000 n 
+0000000302 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+4038
+%%EOF
